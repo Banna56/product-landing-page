@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#page-wrapper {
+  position: relative;
+}
+/* header portion : logo + navigation bar */
+.header{
+  overflow: hidden;
+  background-color:#f1f1f1;
+  padding: 20px 10px
+}
+.header a{
+  float: left;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+/* product description */
+.container{
+  display: flex;
+  flex-flow:row wrap;
+/*   height: 100%; */
+  justify-content: center;
+  margin: 0;
+  padding: 60px;
+}
+
+.container> .video-section, .product-description{
+  width: 450px;
+  height: 500px;
+  margin: 15px;
+  height: 100%
+}
+
+iframe{
+  border-radius: 5px;
+}
+.product-description{
+  background: #ff9900;
+  padding: 50px;
+  border-radius: 5px;
+} 
+
+.product-description h3, h5{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.product-description p{
+  text-align: justify;
+  margin-left:30px;
+}
+
+.product-description p:before{
+    content: ">>";
+    margin-right: 10px;
+   
+}
+
+/* pricing container */
+.pricing-container{
+  display: flex;
+  flex-flow:row wrap;
+/*   height: 100%; */
+  justify-content: center;
+  align-items:center;
+  border: 1px;
+  margin: 0;
+  padding: 6px;
+  background: #0c0032;
+}
+@media screen and (max-width:500px){
+  .pricing-container{
+    display: flex;
+    flex-flow:column wrap;
+  }
+ .pricing-container .pricing{
+    width: 60%;
+    height: 100%;
+  }
+}
+/* responsive design for tablets and ipads */
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+        .pricing-container .pricing{
+            width: 40%;
+            }
+  
+}
+/* responsive design for android devices*/
+@media (min-width: 481px) and (max-width: 767px) {
+  
+        .pricing-container .pricing{
+            width: 50%;
+            }  
+         }
+.pricing{
+  border: 1px;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 30px 25px;
+  width: 22%;
+    
+}
+
+.pricing > h3,h4,p{
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+.pricing > h3{
+  background: #191970;
+  border-radius: 10px;
+  padding: 15px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  font-family: sans;
+}
+
+.pricing > h4{
+  font-size: 32px;
+}
+
+hr{
+  width: 40%;
+  margin-left: 80px;
+  margin-top: 20px;
+  color: green;
+}
+
+#price-box1, #price-box3{
+  background: orange;
+}
+#price-box2{
+  background: #FF4500; 
+}
+p{
+  color: black;
+}
+/* contact form styling */
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  padding: 150px 0px;
+  background: orange ;
+}
+
+.contact > h3{
+      margin-bottom: 20px;
+      word-wrap: break-word;
+      letter-spacing: 3px;
+      color: white;
+      font-size: 24px;
+      font-family: sans;
+}
+
+.contact input[type="submit"]{
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  background-color: royalblue;
+  color: white;
+  letter-spacing: 3px;
+  border-radius: 5px;
+}
+
+.contact input[type="email"]{
+   max-width: 275px;
+   width: 100%;
+   padding: 5px;
+   border-radius: 5px;
+}
+
